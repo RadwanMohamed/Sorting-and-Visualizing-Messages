@@ -32,7 +32,7 @@
     function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
             center: new google.maps.LatLng(26.8206, 30.8025),
-            zoom: 1,
+            zoom: 2,
         });
         const icons = {
             Neutral: {
