@@ -18,7 +18,7 @@ class MessageController extends Controller
         $data =$this->makeExternalRequest(self::MESSAGES_API);
         foreach ($data['feed']['entry'] as $key => $value)
         {
-            $returnArray = array();
+            $returnArray = [];
             $pattern = "/(messageid|message|sentiment):(.+?)(?= messageid:| message:| sentiment:|$)/";
             preg_match_all($pattern ,$value['content']['$t'],$m ,PREG_SET_ORDER);
             foreach($m as $item)
