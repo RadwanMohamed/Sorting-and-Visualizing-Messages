@@ -42,5 +42,13 @@ class Controller extends BaseController
             return url('/img/map_sad.png');
         return url('/img/map_normal.png');
     }
+    protected static  function getTextColor($sentiment)
+    {
+        if ($sentiment == 'Positive')
+            return 'green';
+        if ($sentiment == 'Negative')
+            return 'red';
+        return 'yellow';
+    }
 
 }

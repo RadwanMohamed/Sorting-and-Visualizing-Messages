@@ -26,6 +26,7 @@ class MessageController extends Controller
                 $returnArray[$item[1]] = trim(rtrim($item[2],','));
                 $returnArray['location'] = $this->getMessageLocation($value['content']['$t']);
                 $returnArray['icon'] = self::getIcon(trim($m[2][2]));
+                $returnArray['color'] = self::getTextColor(trim($m[2][2]));
             }
             $messages[] =$returnArray;
         }

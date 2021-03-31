@@ -50,6 +50,14 @@
             {
                 position: new google.maps.LatLng(parseFloat("{{$value['location']['lat']}}"),parseFloat("{{$value['location']['lng']}}")),
                 type: "{{$value['sentiment']}}",
+
+                text :  {
+                    color: "{{$value['color']}}",
+                    fontWeight: 'bold',
+                    text:  "{{$value['message']}}",
+                    fontSize: '10px',
+                },
+
             },
             @endforeach
         ];
@@ -61,6 +69,7 @@
                 position: features[i].position,
                 icon: icons[features[i].type].icon,
                 map: map,
+                label:  features[i].text,
             });
         }
     }
